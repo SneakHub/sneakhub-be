@@ -14,10 +14,13 @@ activate the virtual environment.
 install all packages/libraries following the file "requirements.txt".
 
 `$ pip install -r requirements.txt`
+
 build the docker compose.
 
 `$ docker compose build`
+
 run server by command.
+
 `$ docker compose up`
 
 _you can check you app via the link http://localhost:80
