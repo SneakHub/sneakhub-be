@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from typing import Union
-
+from app.routers.items import router as item_router
 from app.config import get_settings
 
 app = FastAPI()
+app.include_router(item_router)
 
 @app.get("/")
 async def root():

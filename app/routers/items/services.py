@@ -5,7 +5,7 @@ from ...utils.list import find
 # create a clone database of Item List
 items: List[Item] = []
 
-def find_all() -> list[Item]:
+def find_all() -> List[Item]:
     return items
 
 def find_one(id: str) -> Union[Item, None]:
