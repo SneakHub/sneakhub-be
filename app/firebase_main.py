@@ -15,7 +15,7 @@ google_application_credientals = json.loads(base64_decode(settings.google_applic
 print(google_application_credientals)
 print(type(google_application_credientals))
 
-# google_application_credientals = json.loads(google_application_crediental s)
+# google_application_credientals = json.loads(google_application_credientals)
 # print(google_application_credientals)
 # print(type(google_application_credientals))
 
