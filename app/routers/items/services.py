@@ -6,5 +6,10 @@ from ...utils.list import find
 items: List[Item] = []
 
 def find_all() -> list[Item]:
-    global items
     return items
+
+def find_one(id: str) -> Union[Item, None]:
+    item = find(lambda item: item.id == id, items)
+    if not item:
+        raise Exception(f"no item with value={id} is found!")
+    return item
