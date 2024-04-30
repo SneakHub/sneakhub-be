@@ -22,12 +22,11 @@ def create_one(data: BaseItem) -> Item:
     items = [*items, item]
     return item
 
-def delete_one(id: str) -> Item:
+def delete_one(id: str) -> Union[Item, None]:
     global items
     item = find(lambda item: item.id == id, items)
     if not item:
-        raise Exception(f"no item with value={id} is found!")
-
+        return None
     # delete the found item
     items = list(filter(lambda item: item.id != id, items))
     return item
