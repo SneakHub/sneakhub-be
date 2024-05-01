@@ -1,5 +1,5 @@
 import base64
-def base64_decode(base64_string:str) -> str:
+def base64_decode(base64_string: str) -> str:
     # Decode the Base64 string
     decoded_bytes = base64.b64decode(base64_string)
 
