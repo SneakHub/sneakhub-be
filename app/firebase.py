@@ -7,13 +7,14 @@ import base64
 
 # Load the Firebase Admin SDK credentials from the environment variable
 settings = get_settings()
-
-print(settings.google_application_credentials, end="\n")
+# print(settings.google_application_credentials, end="\n")
 
 # Decode the google_application_credientals
+# because firebase_admin.initialize_app() take argument typed DICT
+# after decoding the credentials variable (string type) -> json.loads() it
 google_application_credientals = json.loads(base64_decode(settings.google_application_credentials))
-print(google_application_credientals)
-print(type(google_application_credientals))
+# print(google_application_credientals)
+# print(type(google_application_credientals))
 
 # google_application_credientals = json.loads(google_application_credientals)
 # print(google_application_credientals)

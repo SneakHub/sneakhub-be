@@ -13,7 +13,8 @@ async def root():
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
-@app.get("/test/read_env")
-async def read_env():
-    settings = get_settings()
-    return settings
+# test configuration between decoded credentials stored in local environment and program
+# @app.get("/test/read_env")
+# async def read_env():
+#     settings = get_settings()
+#     return settings
