@@ -32,3 +32,4 @@ stop the docker compose and remove it
 deactivate the virtual environment.
 
 `$ deactivate`
+hello world

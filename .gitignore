@@ -1,3 +1,5 @@
 .local_env
 keyFolder
 .env
+__pycache__
+*.pyc

@@ -1,9 +1,14 @@
 from fastapi import FastAPI
-from typing import Union
+
+from .routers.items.router import router as items_router
+from .constants import Tags
 
 from app.config import get_settings
 
 app = FastAPI()
+
+app.include_router(items_router, prefix=f"/{Tags.ITEMS.value}", tags=[Tags.ITEMS])
+
 
 @app.get("/")
 async def root():
