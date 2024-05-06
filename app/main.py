@@ -1,3 +1,5 @@
+from ctypes import Union
+
 from fastapi import FastAPI
 
 from .routers.items.router import router as items_router
@@ -15,7 +17,7 @@ async def root():
     return {"message": "Hello World!"}
 
 @app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
+def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 
 # test configuration between decoded credentials stored in local environment and program
