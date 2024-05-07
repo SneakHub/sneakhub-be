@@ -3,7 +3,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 # Use a service account.
-cred = credentials.Certificate(r"D:\BK\hk232\project\sneakhub-be\keyFolder\sneakhub-dev-firebase-adminsdk-j0eft-486b461e31.json")
+cred = credentials.Certificate("..\keyFolder\sneakhub-dev-firebase-adminsdk-j0eft-486b461e31.json")
 
 app = firebase_admin.initialize_app(cred)
 
@@ -23,3 +23,6 @@ docs = users_ref.stream()
 
 for doc in docs:
     print(f"{doc.id}: {doc.to_dict()}")
+
+# delete data
+db.collection("users").document("alovelace")

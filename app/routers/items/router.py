@@ -5,7 +5,7 @@ from fastapi import APIRouter
 
 from . import services
 from .dto import CreateItemRequest, UpdateItemRequest
-from ...schemas import Item
+from ...schemas.item import Item
 
 # A router to handle the CRUD operations for items
 router = APIRouter()
