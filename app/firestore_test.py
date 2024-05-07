@@ -9,20 +9,24 @@ app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-# add data
-doc_ref = db.collection("users").document("user No1")
-doc_ref.set({"first": "Khang", "last": "Chau", "birthday": "2001"})
+# # add data
+# doc_ref = db.collection("users").document("user No1")
+# doc_ref.set({"first": "Khang", "last": "Chau", "birthday": "2001"})
+#
+# doc_ref = db.collection("users").document("user No2")
+# doc_ref.set({"first": "Trang", "last": "Chau", "birthday": "1991"})
+#
+#
+# # read data
+# users_ref = db.collection("users")
+# docs = users_ref.stream()
+#
+# for doc in docs:
+#     print(f"{doc.id}: {doc.to_dict()}")
+#
+# # delete data
+# db.collection("users").document("alovelace").delete()
 
-doc_ref = db.collection("users").document("user No2")
-doc_ref.set({"first": "Trang", "last": "Chau", "birthday": "1991"})
+def add_doc(collection: str, docu: str):
+    pass
 
-
-# read data
-users_ref = db.collection("users")
-docs = users_ref.stream()
-
-for doc in docs:
-    print(f"{doc.id}: {doc.to_dict()}")
-
-# delete data
-db.collection("users").document("alovelace")
