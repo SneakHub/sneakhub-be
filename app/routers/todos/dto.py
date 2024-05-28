@@ -1,10 +1,10 @@
-from ...schemas.todos import BaseToDos, ToDos
+from ...schemas.todo import BaseTodo, ToDo
 
 
 # Data Transfer Objects (DTOs)
-class CreateToDosRequest(BaseToDos):
+class CreateToDoRequest(BaseTodo):
     pass
 
 
-class UpdateToDosRequest(ToDos):
+class UpdateToDoRequest(BaseTodo):
     pass

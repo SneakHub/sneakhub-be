@@ -2,8 +2,11 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
+
 # Use a service account.
-cred = credentials.Certificate("..\keyFolder\sneakhub-dev-firebase-adminsdk-j0eft-486b461e31.json")
+cred = credentials.Certificate(
+    "./keyFolder/sneakhub-dev-firebase-adminsdk-j0eft-486b461e31.json"
+)
 
 app = firebase_admin.initialize_app(cred)
 
@@ -27,6 +30,6 @@ db = firestore.client()
 # # delete data
 # db.collection("users").document("alovelace").delete()
 
-def add_doc(collection: str, docu: str):
-    pass
+doc_ref = db.collection("todos").document("3a1a1142-c47c-41b7-b782-c6b8f82a186c")
 
+print(doc_ref.get().to_dict())

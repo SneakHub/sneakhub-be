@@ -2,4 +2,7 @@
 keyFolder
 .env
 __pycache__
-*.pyc
+# pick all file .pyc
+*.pyc 
+firestore_test.py
+

@@ -13,7 +13,7 @@ def get_current_datetime_with_tz():
 class UUID4Factory(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
 
-class CurrentTimeFactory(BaseModel):
+class createdAndUpdatedAtTimeInitializationFactory(BaseModel):
     # Set the timezone to Vietnam (UTC+7)
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # pydantic.errors.PydanticUserError: A non-annotated attr
