@@ -1,5 +1,10 @@
-.local_env
+.env
+.venv
 keyFolder
 .env
 __pycache__
-*.pyc
+# pick all file .pyc
+*.pyc 
+firestore_test.py
+.local_env copy
+

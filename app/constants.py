@@ -3,3 +3,4 @@ from enum import Enum
 
 class Tags(str, Enum):
     ITEMS = "items"
+    TODOS = "todos"

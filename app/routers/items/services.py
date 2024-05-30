@@ -2,7 +2,7 @@
 
 from typing import List, Union
 
-from ...schemas import BaseItem, Item
+from ...schemas.item import BaseItem, Item
 from ...utils.list import find
 
 # Simulate as a item database
